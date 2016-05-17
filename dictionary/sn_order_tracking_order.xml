@@ -3,6 +3,8 @@
     <element label="Order" max_length="40" name="sn_order_tracking_order" type="collection">
         <element label="Buyer" max_length="32" name="buyer" reference="sys_user" type="reference"/>
         <element label="Completion Date" max_length="40" name="completion_date" type="glide_date_time"/>
+        <element label="New field" max_length="40" name="new_field" type="string"/>
+        <element label="new field 2" max_length="40" name="new_field_2" type="string"/>
         <element default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
         <element default="javascript:new GlideDateTime()" label="Order Date" max_length="40" name="order_date" type="glide_date_time"/>
         <element display="true" label="Order ID" max_length="40" name="order_id" type="string"/>
