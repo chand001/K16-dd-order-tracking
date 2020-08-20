@@ -1,17 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<database>
-    <element label="Order" max_length="40" name="sn_order_tracking_order" type="collection">
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Order" max_length="40" name="sn_order_tracking_order" sizeclass="12" type="collection">
         <element label="Buyer" max_length="32" name="buyer" reference="sys_user" type="reference"/>
         <element label="Completion Date" max_length="40" name="completion_date" type="glide_date_time"/>
+        <element label="new field 1" max_length="40" name="new_field_1" type="string"/>
         <element default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
         <element default="javascript:new GlideDateTime()" label="Order Date" max_length="40" name="order_date" type="glide_date_time"/>
         <element display="true" label="Order ID" max_length="40" name="order_id" type="string"/>
         <element label="Product" max_length="32" name="product" reference="sn_order_tracking_product" type="reference"/>
         <element choice="3" default="Processing" label="Status" max_length="40" name="status" type="choice">
             <choice>
-                <element label="Processing" sequence="0" value="Processing"/>
-                <element label="Shipped" sequence="1" value="Shipped"/>
-                <element label="Delivered" sequence="2" value="Delivered"/>
+                <element inactive_on_update="false" label="Processing" sequence="0" value="Processing"/>
+                <element inactive_on_update="false" label="Shipped" sequence="1" value="Shipped"/>
+                <element inactive_on_update="false" label="Delivered" sequence="2" value="Delivered"/>
             </choice>
         </element>
         <index name="index">
